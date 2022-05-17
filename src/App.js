@@ -1,5 +1,5 @@
 import Home from './Components/Home';
-import './index.css';
+import './Styles/css/index.css';
 
 function App() {
   return (

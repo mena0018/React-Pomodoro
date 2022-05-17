@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+.container {
+  width: 450px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background: #ececec;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 50px auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 5px;
+}
+.header button {
+  width: 40px;
+  position: relative;
+  background: transparent;
+  border: 2px solid #4a64d8;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #4a64d8;
+  height: 40px;
+  aspect-ratio: 1/1;
+  margin: 0 10px;
+  box-shadow: 0 3px 0px #4a64d8;
+  cursor: pointer;
+}
+.header button:active {
+  box-shadow: 0 0px 0px #4a64d8;
+  top: 5px;
+}
+.header span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.timer {
+  width: 60%;
+  background: #4a64d8;
+  padding: 10px 5px;
+  border-radius: 5px;
+  color: #ececec;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.container-buttons {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-buttons .play, .container-buttons .reset-pause {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid #4a64d8;
+  padding: 7px;
+  box-shadow: 0 6px 0 #4a64d8;
+}
+.container-buttons .play:active, .container-buttons .reset-pause:active {
+  box-shadow: 0 0px 0px #4a64d8;
+  top: 5px;
+}
+.container-buttons .play-btn, .container-buttons .reset-pause-btn {
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+.container-buttons img {
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+/*# sourceMappingURL=Home.css.map */
