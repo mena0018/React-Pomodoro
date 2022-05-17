@@ -1,0 +1,18 @@
+// Mixins
+
+@mixin align-flex($justify-value) {
+    display: flex;
+    justify-content: $justify-value;
+    align-items: center;
+  }
+  
+  @mixin img-resize($width) {
+    width: $width;
+    object-fit: cover;
+    height: 100%;
+  }
+  
+  @mixin text-bold {
+    color: $dark-green;
+    font-weight: 600;
+  }

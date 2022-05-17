@@ -1,0 +1,27 @@
+@import './variables';
+@import './mixins';
+
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-fam;
+  height: 100vh;
+  background: #ececec;
+}
+
+/* Loader */
+.fa-spinner {
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $dark-green;
+}
