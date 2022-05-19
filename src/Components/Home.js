@@ -9,8 +9,10 @@ export default function Home() {
 
   const [sessionTime, setSessionTime] = useState(1500)
   const [sessionTimeFixed, setSessionTimeFixed] = useState(1500)
+
   const [breakTime, setBreakTime] = useState(300)
   const [breakTimeFixed, setBreakTimeFixed] = useState(300)
+
   const [chrono, setChrono] = useState(false)
   const [state, dispatch] = useReducer(reducer);
   
@@ -30,10 +32,11 @@ export default function Home() {
 
   }, [chrono])
 
+
   function reducer (state, action) {
     switch(action.type) {
+      
       case 'TICK':
-
         if (sessionTime >= 0) {
           setSessionTime(sessionTime - 1)
         }
@@ -44,28 +47,65 @@ export default function Home() {
           setSessionTime(sessionTimeFixed)
           setBreakTime(breakTimeFixed)
         }
+        break;
+
+      default: 
+        console.log("Renseigner un type valide")
       }
     }
     
   const playPause = () => setChrono(!chrono);
-    
 
+  
+  const handleSession = (param) => {
+    if (param === "+") {
+      setSessionTime(sessionTime + 60)
+      setSessionTimeFixed(sessionTimeFixed + 60)
+    }
+    else if (param === "-") {
+      if (sessionTime / 60 > 1) {
+        setSessionTime(sessionTime - 60)
+        setSessionTimeFixed(sessionTimeFixed - 60)
+      }
+    }
+  }
+
+  const handleBreak = (param) => {
+    if (param === "+") {
+      setBreakTime(breakTime + 60)
+      setBreakTimeFixed(breakTimeFixed + 60)
+    }
+    else if (param === "-") {
+      if (breakTime / 60 > 1) {
+        setBreakTime(breakTime - 60)
+        setBreakTimeFixed(breakTimeFixed - 60)
+      }
+    }
+  }
+
+  const resetFunc = () => {
+    if (chrono) setChrono(!chrono)
+
+    setSessionTime(sessionTimeFixed)
+    setBreakTime(breakTimeFixed)
+  }
+    
   return (
     <>
-      <div className="container">          
+      <div className={chrono ? "container anim" : "container"}>          
 
         <div className="header">
           <div className="session">
             <p>SESSION</p>
-            <button className="btn-plus">+</button>
+            <button className="btn-plus" onClick={() => handleSession('+')}>+</button>
               <span>{sessionTimeFixed / 60}</span>
-            <button className="btn-minus">-</button>
+            <button className="btn-minus" onClick={() => handleSession('-')}>-</button>
           </div>
           <div className="break">
             <p>BREAK</p>
-            <button className="btn-plus">+</button>
+            <button className="btn-plus" onClick={() => handleBreak('+')}>+</button>
               <span>{breakTimeFixed / 60}</span>
-            <button className="btn-minus">-</button>    
+            <button className="btn-minus"  onClick={() => handleBreak('-')}>-</button>    
           </div>
         </div>
 
@@ -90,7 +130,7 @@ export default function Home() {
           </div>
           <div className="reset">
             <button className="reset-btn">
-              <img src={Reset} alt="bouton reset" />
+              <img src={Reset} alt="bouton reset" onClick={resetFunc} />
             </button>
           </div>
         </div>

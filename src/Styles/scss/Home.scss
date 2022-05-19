@@ -11,12 +11,27 @@
     border-radius: 10px;
     padding: 10px;
     margin: 50px auto;
+    user-select: none;
+}
+
+.anim {
+    animation: border-color 1s alternate infinite;
+}
+
+@keyframes border-color {
+    0% {
+        box-shadow: 0px 0px 10px 0 #11116b;
+    }
+    100% {
+        box-shadow: 0px 0px 20px 0 #5f045f;
+    }
 }
 
 .header {
     @include align-flex(space-between);
     text-align: center;
-    margin: 0 5px;
+    width: 300px;
+    height: 70px;
 
     button{
         width: 40px;
