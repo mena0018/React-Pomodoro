@@ -60,7 +60,7 @@
     @include align-flex(space-between);
 
 
-    .play, .reset-pause {
+    .play-pause, .reset {
         @include align-flex(center);
         position: relative;
         background: transparent;
@@ -75,7 +75,7 @@
         }
     }
 
-    .play-btn, .reset-pause-btn {
+    .play-pause-btn, .reset-btn {
         border: none;
         border-radius: 50%;
         background: transparent;  

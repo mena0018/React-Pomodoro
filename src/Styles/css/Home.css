@@ -59,7 +59,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.container-buttons .play, .container-buttons .reset-pause {
+.container-buttons .play-pause, .container-buttons .reset {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,11 +70,11 @@
   padding: 7px;
   box-shadow: 0 6px 0 #4a64d8;
 }
-.container-buttons .play:active, .container-buttons .reset-pause:active {
+.container-buttons .play-pause:active, .container-buttons .reset:active {
   box-shadow: 0 0px 0px #4a64d8;
   top: 5px;
 }
-.container-buttons .play-btn, .container-buttons .reset-pause-btn {
+.container-buttons .play-pause-btn, .container-buttons .reset-btn {
   border: none;
   border-radius: 50%;
   background: transparent;
