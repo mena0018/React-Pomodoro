@@ -30,8 +30,7 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  width: 300px;
-  height: 70px;
+  width: 65%;
 }
 .header button {
   width: 40px;
@@ -51,7 +50,7 @@
   box-shadow: 0 0px 0px #4a64d8;
   top: 5px;
 }
-.header span {
+.header .chiant {
   font-size: 20px;
   font-weight: 600;
 }

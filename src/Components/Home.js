@@ -95,20 +95,22 @@ export default function Home() {
       <div className={chrono ? "container anim" : "container"}>          
 
         <div className="header">
+
           <div className="session">
             <p>SESSION</p>
             <button className="btn-plus" onClick={() => handleSession('+')}>+</button>
-              <span>{sessionTimeFixed / 60}</span>
+              <p className="chiant">{sessionTimeFixed / 60}</p>
             <button className="btn-minus" onClick={() => handleSession('-')}>-</button>
           </div>
+          
           <div className="break">
             <p>BREAK</p>
             <button className="btn-plus" onClick={() => handleBreak('+')}>+</button>
-              <span>{breakTimeFixed / 60}</span>
+              <p className="chiant">{breakTimeFixed / 60}</p>
             <button className="btn-minus"  onClick={() => handleBreak('-')}>-</button>    
           </div>
-        </div>
 
+        </div>
 
         <div className="timer">
           { sessionTime >= 0 ? 
